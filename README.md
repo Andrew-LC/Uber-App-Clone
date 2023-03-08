@@ -12,5 +12,5 @@ Tutorial Followed: [React Native Crash Course for Beginners - Build 4 Apps in 14
 - React Native Maps
 
 ## Todo
-- [] Add Naviagtion
-- [] Add Screens for Naviagtion
+- [ ] Add Naviagtion
+- [ ] Add Screens for Naviagtion
