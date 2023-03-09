@@ -1,6 +1,7 @@
 import { FlatList, Text, Image, Box, Icon } from "native-base";
 import { TouchableOpacity } from "react-native";
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 type dataProps = {
     id: string,
@@ -25,12 +26,13 @@ const data: dataProps[] = [
 ]
 
 export default function NavOptions() {
+    const navigation = useNavigation()
     return (
         <FlatList
             data={data}
             horizontal
             renderItem={({ item }) => (
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate(item.screen)}>
                     <Box p="2" pl="6" pb="8" pt="4" bgColor="rgb(226 232 240)" m="2" w="40">
                         <Image
                             alt={item.title}
